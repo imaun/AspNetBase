@@ -1,0 +1,156 @@
+﻿@page 
+@model LoginPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="loading" lang="fa" data-textdirection="rtl" dir="rtl">
+<!-- BEGIN: Head-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>صفحه ورود</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico">
+    <meta name="theme-color" content="#5A8DEE">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="~/assets/vendors/css/vendors.min.css" />
+    <!-- END: Vendor CSS-->
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font/primary-iran-sans.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-extended.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/themes/dark-layout.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/themes/semi-dark-layout.css" />
+    <!-- END: Theme CSS-->
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/core/menu/menu-types/vertical-menu.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/pages/authentication.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/custome.css" />
+    <!-- END: Page CSS-->
+
+</head>
+<!-- END: Head-->
+
+<body class="vertical-layout vertical-menu-modern 1-column  navbar-sticky footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- login page start -->
+                <section id="auth-login" class="row flexbox-container">
+                    <div class="col-xl-8 col-11">
+                        <div class="card bg-authentication mb-0">
+                            <div class="row m-0">
+                                <!-- left section-login -->
+                                <div class="col-md-6 col-12 px-0">
+                                    <div class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
+                                        <div class="card-header pb-1">
+                                            <div class="card-title">
+                                                <h4 class="text-center mb-2">
+                                                    خوش آمدید
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="d-flex flex-md-row flex-column justify-content-around">
+                                                    @if(ViewData["error"] != null) {
+                                                        <div class="alert alert-danger alert-dismissible mb-2" role="alert">
+                                                          <button type="button" class="close" data-dismiss="alert" aria-label="بستن">
+                                                            <span aria-hidden="true">×</span>
+                                                          </button>
+                                                          <div class="d-flex align-items-center">
+                                                            <i class="bx bx-error"></i>
+                                                            <span>
+                                                              @ViewData["msg"]
+                                                            </span>
+                                                          </div>
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <div class="divider">
+                                                    <div class="divider-text text-uppercase text-muted">
+                                                        <small>ورود به سیستم</small>
+                                                    </div>
+                                                </div>
+                                                <form id="my-form" method="post">
+                                                    <div class="form-group mb-50">
+                                                        <label class="text-bold-700" asp-for="UserName">
+                                                            نام کاربری
+                                                        </label>
+                                                        <input asp-for="UserName" type="text" class="form-control text-right" placeholder="نام کاربری" dir="ltr" />
+                                                        <span asp-validation-for="UserName"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="text-bold-700" asp-for="Password">
+                                                            کلمه عبور
+                                                        </label>
+                                                        <input asp-for="Password" class="form-control text-right" placeholder="کلمه عبور" dir="ltr" />
+                                                        <span asp-validation-for="Password"></span>
+                                                    </div>
+                                                    <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
+                                                        <div class="text-left">
+                                                            <div class="checkbox checkbox-sm">
+                                                                <input type="checkbox" asp-for="RememberMe" class="form-check-input">
+                                                                <label class="checkboxsmall" for="RememberMe"><small>مرا به خاطر بسپار</small></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-right line-height-2"><a href="#" class="card-link"><small>کلمه عبور خود را فراموش کرده اید؟</small></a></div>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary glow w-100 position-relative">
+                                                        ورود<i id="icon-arrow" class="bx bx-left-arrow-alt"></i>
+                                                    </button>
+                                                </form>
+                                                <hr>
+                                                @*<div class="text-center"><small class="mr-25">حسابی ندارید؟</small><a href="auth-register.html"><small>ثبت نام</small></a></div>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- right section image -->
+                                <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
+                                    <div class="card-content">
+                                        <img class="img-fluid" src="~/assets/images/pages/login.png" alt="ورود به سیستم نظام مهندسی">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- login page ends -->
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <!-- BEGIN: Vendor JS-->
+    <script type="text/javascript" src="~/assets/vendors/js/vendors.min.js"></script>
+    <script type="text/javascript" src="~/assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.min.js"></script>
+    <script type="text/javascript" src="~/assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script type="text/javascript" src="~/assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script type="text/javascript" src="~/assets/js/scripts/configs/vertical-menu-light.js"></script>
+    <script type="text/javascript" src="~/assets/js/core/app-menu.js"></script>
+    <script type="text/javascript" src="~/assets/js/core/app.js"></script>
+    <script type="text/javascript" src="~/assets/js/scripts/components.js"></script>
+    <script type="text/javascript" src="~/assets/js/scripts/footer.js"></script>
+    <!-- END: Theme JS-->
+
+    <script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

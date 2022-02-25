@@ -1,0 +1,101 @@
+﻿@*@page
+@model Datiss.Auditing.Admin.Web.CreateRolePage
+@{
+    @ViewData["Title"] = "ایجاد نقش جدید";
+    int i = 0;
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 mb-2 mt-1">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+            <h5 class="content-header-title float-left pr-1">
+                @ViewData["Title"]
+            </h5>
+            <div class="breadcrumb-wrapper">
+                <ol class="breadcrumb p-0 mb-0">
+                <li class="breadcrumb-item"><a asp-page="/index" asp-area="Admin"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a asp-page="/roles/index" asp-area="Admin">
+                    مدیریت نقش ها </a>
+                </li>
+                <li class="breadcrumb-item active">
+                    @ViewData["Title"]
+                </li>
+                </ol>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-body">
+    <section>
+        <div class="card">
+            <div class="card-content">
+                <div class="card-header">
+                    <h4>
+                        @ViewData["Title"]
+                    </h4>
+                </div>
+                <div class="card-body">
+                    @if(Model.HasError) {
+                        <div class="alert alert-danger" role="alert">
+                            <a href="#" class="close" data-dismiss="alert">×</a>
+                            @Html.Raw(Model.Message)
+                        </div>
+                    }
+                    <form id="my-form" method="post">
+                         <div class="row form-group">
+                            <div class="col-3">
+                                <label class="col-form-label my-font">
+                                    عنوان
+                                </label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" asp-for="Title" placeholder="عنوان نقش" class="form-control my-font"/>
+                                <span asp-validation-for="Title"></span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label class="col-form-label my-font">
+                                    نام انگلیسی نقش
+                                </label>
+                            </div>
+                            <div class="col-9">
+                                <input type="text" asp-for="Name" dir="ltr" placeholder="نام نقش" class="form-control my-font"/>
+                                <span asp-validation-for="Name"></span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-3">
+                                <label class="col-form-label my-font">
+                                    توضیحات
+                                </label>
+                            </div>
+                            <div class="col-9">
+                                <textarea asp-for="Description" class="form-control"></textarea>
+                                <span asp-validation-for="Description"></span>
+                            </div>
+                        </div>   
+                        <div class="table-responsive" style="max-height: 500px;">
+                            <table class="table table-striped my-font">
+                                <thead>
+                                <tr>
+                                    <th>دسترسی</th>
+                                    <th>لیست</th>
+                                    <th>ایجاد</th>
+                                    <th>ویرایش</th>
+                                    <th>حذف</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>*@

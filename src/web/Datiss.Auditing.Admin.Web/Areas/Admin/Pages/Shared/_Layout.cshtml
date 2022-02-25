@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html class="loading" lang="fa" data-textdirection="rtl" dir="rtl">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>
+            سیستم نظام مهندسی
+        </title>
+        <link rel="shortcut icon" type="image/x-icon" href="~/assets/favicon.ico">
+	    <meta name="theme-color" content="#5A8DEE">
+
+        <!-- BEGIN: Vendor CSS-->
+        <link rel="stylesheet" type="text/css" href="~/assets/vendors/css/vendors.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/assets/vendors/css/ui/prism.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/assets/vendors/css/tables/datatable/datatables.min.css">
+        <link rel="stylesheet" type="text/css" href="~/assets/vendors/css/tables/datatable/extensions/dataTables.checkboxes.css">
+        <link rel="stylesheet" type="text/css" href="~/assets/vendors/css/tables/datatable/responsive.bootstrap.min.css">
+        <!-- END: Vendor CSS-->
+
+        <!-- BEGIN: Theme CSS-->
+        <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-extended.css" />
+        <link rel="stylesheet" type="text/css" href="~/assets/css/colors.css" />
+        <link rel="stylesheet" type="text/css" href="~/assets/css/components.css" />
+        <link rel="stylesheet" type="text/css" href="~/assets/css/themes/dark-layout.css" />
+        <link rel="stylesheet" type="text/css" href="~/assets/css/themes/semi-dark-layout.css" />
+
+        <!-- BEGIN: Page CSS-->
+        <link rel="stylesheet" type="text/css" href="~/assets/css/core/menu/menu-types/vertical-menu.css" />
+        <!-- END: Page CSS-->
+        <link rel="stylesheet" type="text/css" href="~/assets/css/custome.css" />
+
+        @RenderSection("secHead", required: false)
+
+    </head>
+
+    <body class="vertical-layout vertical-menu-modern 2-columns  navbar-sticky footer-static" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+        
+        <partial name="_header" />
+
+        <partial name="_menu" />
+
+        <div class="app-content content">
+            <div class="content-overlay"></div>
+            <div class="content-wrapper">
+                @RenderBody()
+            </div>
+        </div>
+
+        <div class="sidenav-overlay"></div>
+        <div class="drag-target"></div>
+
+        <partial name="_footer" />
+
+        <!-- BEGIN: Vendor JS-->
+        <script type="text/javascript" src="~/assets/vendors/js/vendors.min.js"></script>
+        <script type="text/javascript" src="~/assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.min.js"></script>
+        <script type="text/javascript" src="~/assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+        <script type="text/javascript" src="~/assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+        <script type="text/javascript" src="~/assets/vendors/js/forms/select/select2.full.min.js"></script>
+        <!-- BEGIN Vendor JS-->
+
+        <!-- BEGIN: Page Vendor JS-->
+        <script type="text/javascript" src="~/assets/vendors/js/ui/prism.min.js"></script>
+        <!-- END: Page Vendor JS-->
+
+        <!-- BEGIN: Theme JS-->
+        <script type="text/javascript" src="~/assets/js/scripts/configs/vertical-menu-light.js"></script>
+        <script type="text/javascript" src="~/assets/js/core/app-menu.js"></script>
+        <script type="text/javascript" src="~/assets/js/core/app.js"></script>
+        <!-- END: Them`e JS-->
+
+        <partial name="_ValidationScripts" />
+
+        @RenderSection("secFoot", required: false)
+    </body>
+</html>

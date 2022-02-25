@@ -1,0 +1,98 @@
+﻿@page
+@model AspNetBase.Admin.Web.CreateUserPage
+@{
+    ViewData["Title"] = "تعریف کاربر جدید";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 mb-2 mt-1">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+            <h5 class="content-header-title float-left pr-1">
+                @ViewData["Title"]
+            </h5>
+            <div class="breadcrumb-wrapper">
+                <ol class="breadcrumb p-0 mb-0">
+                <li class="breadcrumb-item"><a asp-page="/index" asp-area="Admin"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a asp-page="/users/index" asp-area="Admin">
+                    مدیریت کاربران </a>
+                </li>
+                <li class="breadcrumb-item active">
+                    @ViewData["Title"]
+                </li>
+                </ol>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-body">
+    <section>
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    @ViewData["Title"]
+                </h4>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <form id="my-form" method="post">
+                        <div class="row">
+                            @*<div class="col-md-6 col-12">
+                                
+                            </div>*@
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="FirstName">نام</label>
+                                    <input asp-for="FirstName" class="form-control" placeholder="نام"/>
+                                    <span asp-validation-for="FirstName"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="LastName">نام خانوادگی</label>
+                                    <input asp-for="LastName" class="form-control" placeholder="نام خانوادگی"/>
+                                    <span asp-validation-for="LastName"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="UserName">نام کاربری</label>
+                                    <input asp-for="UserName" class="form-control" placeholder="نام کاربری"/>
+                                    <span asp-validation-for="UserName"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="NationalCode">کد ملی</label>
+                                    <input asp-for="NationalCode" class="form-control" placeholder="کد ملی"/>
+                                    <span asp-validation-for="NationalCode"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label class="control-label" asp-for="PhoneNumber">شماره تماس</label>
+                                    <input asp-for="PhoneNumber" class="form-control" placeholder="شماره تماس"/>
+                                    <span asp-validation-for="PhoneNumber"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary mr-1 mb-1">ثبت</button>
+                                <a href="#" class="btn btn-light-secondary mr-1 mb-1">بازگشت</a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="Mapster" Version="7.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\AspNetBase.Contracts\AspNetBase.Contracts.csproj" />
+    <ProjectReference Include="..\..\core\AspNetBase.Core\AspNetBase.Core.csproj" />
+    <ProjectReference Include="..\..\core\AspNetBase.Domain\AspNetBase.Domain.csproj" />
+    <ProjectReference Include="..\..\data\AspNetBase.Persistence\AspNetBase.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
