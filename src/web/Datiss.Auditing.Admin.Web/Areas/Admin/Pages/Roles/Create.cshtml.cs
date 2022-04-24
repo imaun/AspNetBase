@@ -31,9 +31,8 @@ namespace AspNetBase.Admin.Web {
 
         [BindProperty]
         public string Description { get; set; }
-
-        public IEnumerable<AppClaimTypeViewModel> ClaimTypeSource { get; set; }
-
+        
+        public IEnumerable<AppcClaimTypeViewModel> ClaimTypeSource { get; set; }
         public Dictionary<string, string> SelectedClaims { get; set; }
 
         #endregion
