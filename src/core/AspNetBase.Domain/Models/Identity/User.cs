@@ -26,8 +26,6 @@ namespace AspNetBase.Domain.Models
             }
         }
 
-        public string NationalCode { get; set; }
-
         public UserStatus Status {
             get => UserStatus.FromValue<UserStatus>(_statusId);
             set => _statusId = value.Id;

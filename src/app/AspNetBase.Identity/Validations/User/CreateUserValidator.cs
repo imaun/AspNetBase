@@ -12,7 +12,6 @@ namespace AspNetBase.Identity.Validations
             RuleFor(x => x.FirstName).NotEmpty().WithMessage(IdentityStrings.Req_User_FirstName);
             RuleFor(x => x.LastName).NotEmpty().WithMessage(IdentityStrings.Req_User_LastName);
             RuleFor(x => x.UserName).NotEmpty().WithMessage(IdentityStrings.Req_User_UserName);
-            RuleFor(x=> x.NationalCode).NotEmpty().WithMessage(IdentityStrings.Req_User_NationalCode);
         }
 
     }

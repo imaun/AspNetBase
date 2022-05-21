@@ -9,6 +9,10 @@ namespace AspNetBase.Repository {
 
         protected UserRepository(IAppDbContext db) : base(db) { }
 
+
+        public async Task<User> GetByIdAsync(long id) {
+            
+        }
     }
 
 }
