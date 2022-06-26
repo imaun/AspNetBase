@@ -20,10 +20,6 @@ namespace Datiss.Auditing.Domain.Extensions {
                         ? query.OrderByDescending(_ => _.LastName)
                         : query.OrderBy(_ => _.LastName);
 
-                case "nationalcode": return orderDesc
-                        ? query.OrderByDescending(_ => _.NationalCode)
-                        : query.OrderBy(_ => _.NationalCode);
-
                 case "phonenumber": return orderDesc
                         ? query.OrderByDescending(_ => _.PhoneNumber)
                         : query.OrderBy(_ => _.PhoneNumber);

@@ -57,8 +57,7 @@ namespace AspNetBase.Identity.Commands {
             {
                 UserName = command.UserName,
                 FirstName = command.FirstName,
-                LastName = command.LastName,
-                NationalCode = command.NationalCode
+                LastName = command.LastName
             };
 
             try {
